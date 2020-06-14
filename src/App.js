@@ -1,17 +1,17 @@
 import React from 'react';
 import {BrowserRouter,Link,Route,Switch} from 'react-router-dom'
 
-import Name from './components/Name'
-import Cricketer from './components/Cricketer'
-import Indiancolor from './components/ndiancolor'
-//import Summary from './components/summary'
+import Name from '../src/components/Name'
+import Cricketer from '../src/components/Cricketer'
+import Indiancolor from './components/Indiancolor'
+import Summary from '../src/components/summary'
 
 function App() {
   return (
   
       <BrowserRouter>
-      <div>
-      <h1>Welcome To Trivia App</h1>
+      <div >
+      <h1>Trivia App</h1>
       <Link to="/"></Link>
       <Link to="/cricketer"></Link>
       <Link to="/indiancolor"></Link>
@@ -23,6 +23,7 @@ function App() {
       <Route path="/" component={Name} exact={true}/>
       <Route path ="/cricketer" component={Cricketer} exact={true}/>
       <Route path="/indiancolor" component={Indiancolor} exact={true}/>
+      <Route path="/summary" component={Summary} exact={true}/>
       
       </Switch>
       </div>

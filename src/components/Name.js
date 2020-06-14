@@ -17,20 +17,17 @@ class Name extends React.Component{
 
     handleSubmit=(e)=>{
         e.preventDefault()
-        const formData={
-            name:this.state.name
-        }
-        localStorage.setItem('name',JSON.stringify(formData))
+       const GAME = {GAME: Date.now(),name: this.state.name }
+        localStorage.setItem('GAME',JSON.stringify(GAME))
+        this.props.history.push('/cricketer')
     }
     render(){
         return(
             <div>
             <h1>What is youre name?</h1>
-            <form onSubmit={this,this.handleSubmit}>
                 <input type="text" value={this.state.name} name="name" id="name" onChange={this.handleChange}/>
-               <Link to="/cricketer"><button>Next</button> </Link> 
-
-            </form>
+               <button onClick={this.handleSubmit}>Next
+               </button>
             </div>
         )
     }

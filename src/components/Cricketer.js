@@ -6,6 +6,7 @@ class Cricketer extends React.Component{
         super()
         this.state={
             cricketers:['Sachin Tendulkar','Virat Kolli','Adam Gilchirst','Jacques Kallis'],
+            cricketer: ""
             
         }
     }
@@ -18,26 +19,24 @@ class Cricketer extends React.Component{
 
     handleSubmit=(e)=>{
         e.preventDefault()
-        const formData={
-            cricketer:this.state.cricketer
-        }
-        localStorage.setItem('cricketer',JSON.stringify(formData))
+        let Game = JSON.parse(localStorage.getItem('GAME'))
+        Game = {...Game, cricketer: this.state.cricketer}
+        localStorage.setItem('GAME',JSON.stringify(Game))
+        this.props.history.push('/indiancolor')
     }
 
     render(){ 
         return(
-                <div>
+                <div >
                     <h1>Who is the best cricketer in the world?</h1>
-                    <form onSubmit={this.handleSubmit}>
                         <ul>
                             {
                                 this.state.cricketers && this.state.cricketers.map((cri,i)=>{
                                     return <li key={i} type="A"><input type="radio" name="cricketer" value={cri} onChange={this.handleChange}/>{cri}</li>
                                  })
                             }
-                        </ul>
-                    </form>
-                   <Link to="/indiancolor"><button>Next</button></Link> 
+                        </ul> 
+                    <button onClick={this.handleSubmit}> Next </button>
                 </div>
         )
     }
