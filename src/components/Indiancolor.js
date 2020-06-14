@@ -5,6 +5,7 @@ import { Multiselect } from 'multiselect-react-dropdown';
 
 class Indiancolor extends React.Component{
     constructor(props){
+        //console.log('hvb',props)
         super(props)
         this.state={
             colors:[{ name: "White",id:1},{ name: "Yellow",id:2},{ name: "Orange",id:3},{name: "Green",id:4 }],
@@ -35,7 +36,7 @@ class Indiancolor extends React.Component{
                 colorsChoosen: selectedList
             }
         })
-        // console.log(selectedList,selectedItem.name)
+        //console.log('indian color',selectedList,selectedItem.name)
     }
      
     onRemove = (selectedList, removedItem) => {
@@ -46,14 +47,14 @@ class Indiancolor extends React.Component{
         })
     }
     render(){
-        // console.log('on select', this.state.colorsChoosen)
+         console.log('on select', this.state.colorsChoosen)
         return(
                 <div>
                     <h1>What are the colors in the Indian national flag?</h1>
 
                     <Multiselect
                     name='colorsChoosen'
-                    onChange={this.handleChange} options={this.state.colors} selectedValues={this.state.colorsChoosen} displayValue="name"  style={{"min-width": "40px" }} onRemove={this.onRemove} onSelect={this.onSelect}/>
+                     options={this.state.colors} selectedValues={this.state.colorsChoosen} displayValue="name"  style={{"min-width": "40px" }} onRemove={this.onRemove} onSelect={this.onSelect}/>
 
                     <button onClick={this.handleSubmit} >Next</button>
                 </div>

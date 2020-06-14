@@ -29,7 +29,7 @@ class Summary extends React.Component{
     }
    render(){
        const game = this.state.game
-        console.log(game)
+        console.log('summary',game)
        return(
            <div >
                <h2>Summary</h2>
@@ -39,6 +39,7 @@ class Summary extends React.Component{
        <p>Who is the best cricketer in the world?
        </p>
        <p>Answer: {game.cricketer}</p>
+
        <p>What are the colors in the Indian national flag?
        </p>
        <p>Answer: {game.flagColors.map(c => c.name).join(",")}</p></>
