@@ -44,8 +44,8 @@ class Summary extends React.Component{
        </p>
        <p>Answer: {game.flagColors.map(c => c.name).join(",")}</p></>
                }
-               <button> <Link to="/"> Finish</Link></button>
-               <button onClick={this.histroyClick}>  History</button>
+               <button> <Link to="/" > Finish</Link></button>
+               <button onClick={this.histroyClick} style={{color:"blue"}}>  History</button>
                <h2>History List</h2>
                {this.state.histroyOn && this.state.history.map((hist,index)=>{
                    return <div key={index}> <p > GAME {index+1}: <Moment>{hist.GAME}</Moment> </p>

@@ -50,13 +50,13 @@ class Indiancolor extends React.Component{
          console.log('on select', this.state.colorsChoosen)
         return(
                 <div>
-                    <h1>What are the colors in the Indian national flag?</h1>
+                    <h2>What are the colors in the Indian national flag?</h2>
 
                     <Multiselect
                     name='colorsChoosen'
                      options={this.state.colors} selectedValues={this.state.colorsChoosen} displayValue="name"  style={{"min-width": "40px" }} onRemove={this.onRemove} onSelect={this.onSelect}/>
 
-                    <button onClick={this.handleSubmit} >Next</button>
+                    <button onClick={this.handleSubmit} type="button" class="btn btn-info">Next</button>
                 </div>
         )
     }

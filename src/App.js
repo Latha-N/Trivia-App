@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter,Link,Route,Switch} from 'react-router-dom'
+import './App.css'
 
 import Name from '../src/components/Name'
 import Cricketer from '../src/components/Cricketer'

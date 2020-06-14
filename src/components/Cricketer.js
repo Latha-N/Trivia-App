@@ -28,7 +28,7 @@ class Cricketer extends React.Component{
     render(){ 
         return(
                 <div >
-                    <h1>Who is the best cricketer in the world?</h1>
+                    <h2>Who is the best cricketer in the world?</h2>
                         <ul>
                             {
                                 this.state.cricketers && this.state.cricketers.map((cri,i)=>{
@@ -36,7 +36,7 @@ class Cricketer extends React.Component{
                                  })
                             }
                         </ul> 
-                    <button onClick={this.handleSubmit}> Next </button>
+                    <button onClick={this.handleSubmit} type="button" class="btn btn-info"> Next </button>
                 </div>
         )
     }

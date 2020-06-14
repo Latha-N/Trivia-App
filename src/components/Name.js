@@ -1,6 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
+
+
 class Name extends React.Component{
     constructor(){
         super()
@@ -24,9 +26,9 @@ class Name extends React.Component{
     render(){
         return(
             <div>
-            <h1>What is youre name?</h1>
+            <h2>What is youre name?</h2>
                 <input type="text" value={this.state.name} name="name" id="name" onChange={this.handleChange}/>
-               <button onClick={this.handleSubmit}>Next
+               <button onClick={this.handleSubmit} type="button" class="btn btn-info">Next
                </button>
             </div>
         )
