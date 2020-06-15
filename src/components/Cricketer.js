@@ -18,8 +18,8 @@ class Cricketer extends React.Component{
 
     handleSubmit=(e)=>{
         e.preventDefault()
-            if(this.state.cricketer == ""){
-                alert ("error")
+            if(this.state.cricketer === ""){
+                alert ("Enter the Input field")
             } else {
                 let Game = JSON.parse(localStorage.getItem('GAME'))
                 Game = {...Game, cricketer: this.state.cricketer}
@@ -41,7 +41,7 @@ class Cricketer extends React.Component{
                                  })
                             }
                         </ul> 
-                        <button onClick={this.handleSubmit} type="submit" class="btn btn-primary">NEXT</button>
+                        <button onClick={this.handleSubmit} type="submit" className="btn btn-primary">NEXT</button>
 
                 </div>
         )

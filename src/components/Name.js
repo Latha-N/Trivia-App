@@ -1,5 +1,4 @@
 import React from 'react';
-import { Alert } from 'antd';
 
 class Name extends React.Component{
     constructor(){
@@ -17,8 +16,9 @@ class Name extends React.Component{
 
     handleSubmit=(e)=>{
         e.preventDefault()
-        if(this.state.name == ""){
-            alert("Invalid Input")
+        if(this.state.name === ""){
+            alert ("Enter the input field")
+          
         } else {
             const GAME = {GAME: Date.now(),name: this.state.name }
             localStorage.setItem('GAME',JSON.stringify(GAME))
@@ -34,7 +34,7 @@ class Name extends React.Component{
             <label>What is youre name?</label>
             <br></br>
                 <input type="text" value={this.state.name} name="name" id="name" onChange={this.handleChange}/> &nbsp;&nbsp;
-                <button onClick={this.handleSubmit} type="submit" class="btn btn-primary">NEXT</button>
+                <button onClick={this.handleSubmit} type="submit" className="btn btn-primary">NEXT</button>
                
             </div>
         )

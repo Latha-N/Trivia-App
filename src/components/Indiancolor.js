@@ -21,8 +21,8 @@ class Indiancolor extends React.Component{
 
     handleSubmit=(e)=>{
         e.preventDefault()
-        if(this.state.colorsChoosen == ""){
-            alert ("error")
+        if(this.state.colorsChoosen === ""){
+            alert ("Enter the input field")
         }else{
             let Game = JSON.parse(localStorage.getItem('GAME'))
             Game = {...Game, flagColors: this.state.colorsChoosen}

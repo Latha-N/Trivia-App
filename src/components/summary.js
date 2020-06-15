@@ -31,8 +31,8 @@ class Summary extends React.Component{
        const game = this.state.game
         console.log('summary',game)
        return(
-           <div className="container" >
-               <h2>Summary</h2>
+           <div className="container" class="text-center">
+               <h2 className="text-primary">Summary</h2>
                {Object.keys(game).length>0 && <>
        <p>Hello {game.name}</p>
        <p>Here are the selected answers: </p>
@@ -45,10 +45,10 @@ class Summary extends React.Component{
        <p>Answer: {game.flagColors.map(c => c.name).join(",")}</p></>
                }
                <button> <Link to="/" > Finish</Link></button>
-               <button onClick={this.histroyClick} style={{color:"blue"}}>  History</button>
-               <h2>History List</h2>
+               <button onClick={this.histroyClick} style={{color:"blue"}}>  History</button><br></br><br></br>
+               
                {this.state.histroyOn && this.state.history.map((hist,index)=>{
-                   return <div key={index}> <p > GAME {index+1}: <Moment>{hist.GAME}</Moment> </p>
+                   return <div key={index}> <p><span className="text-success">GAME {index+1}:</span>  <Moment>{hist.GAME}</Moment> </p>
                    <p> Name: {hist.name} </p>
                    <p> Who is the best cricketer in the world? : {hist.cricketer} </p>
                    <p> What are the colors in the Indian national flag? : {hist.flagColors.map(c => c.name).join(",")}</p> </div>
