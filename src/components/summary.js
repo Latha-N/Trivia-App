@@ -31,7 +31,7 @@ class Summary extends React.Component{
        const game = this.state.game
         console.log('summary',game)
        return(
-           <div >
+           <div className="container" >
                <h2>Summary</h2>
                {Object.keys(game).length>0 && <>
        <p>Hello {game.name}</p>

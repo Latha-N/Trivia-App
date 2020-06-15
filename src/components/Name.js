@@ -31,10 +31,10 @@ class Name extends React.Component{
     render(){
         return(
             <div>
-            <h2>What is youre name?</h2>
-                <input type="text" value={this.state.name} name="name" id="name" onChange={this.handleChange}/>
-
-               <button onClick={this.handleSubmit} type="button" className="btn btn-info">Next</button>
+            <label>What is youre name?</label>
+            <br></br>
+                <input type="text" value={this.state.name} name="name" id="name" onChange={this.handleChange}/> &nbsp;&nbsp;
+                <button onClick={this.handleSubmit} type="submit" class="btn btn-primary">NEXT</button>
                
             </div>
         )
