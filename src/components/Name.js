@@ -33,9 +33,8 @@ class Name extends React.Component{
             <div>
             <label>What is youre name?</label>
             <br></br>
-                <input type="text" value={this.state.name} name="name" id="name" onChange={this.handleChange}/> &nbsp;&nbsp;
+                <input type="text" value={this.state.name} name="name" id="name" onChange={this.handleChange}/>
                 <button onClick={this.handleSubmit} type="submit" className="btn btn-primary">NEXT</button>
-               
             </div>
         )
     }
