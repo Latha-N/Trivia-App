@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 
 class Cricketer extends React.Component{
     constructor(){
@@ -19,11 +18,17 @@ class Cricketer extends React.Component{
 
     handleSubmit=(e)=>{
         e.preventDefault()
-        let Game = JSON.parse(localStorage.getItem('GAME'))
-        Game = {...Game, cricketer: this.state.cricketer}
-        localStorage.setItem('GAME',JSON.stringify(Game))
-        this.props.history.push('/indiancolor')
+            if(this.state.cricketer == ""){
+                alert ("error")
+            } else {
+                let Game = JSON.parse(localStorage.getItem('GAME'))
+                Game = {...Game, cricketer: this.state.cricketer}
+                localStorage.setItem('GAME',JSON.stringify(Game))
+                this.props.history.push('/indiancolor')
+            }
+  
     }
+    
 
     render(){ 
         return(
@@ -36,7 +41,7 @@ class Cricketer extends React.Component{
                                  })
                             }
                         </ul> 
-                    <button onClick={this.handleSubmit} type="button" class="btn btn-info"> Next </button>
+                    <button onClick={this.handleSubmit} type="button" className="btn btn-info"> Next </button>
                 </div>
         )
     }
