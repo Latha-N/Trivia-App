@@ -13,13 +13,13 @@ class Summary extends React.Component{
             history : localStorage.getItem('history') ? JSON.parse(localStorage.getItem('history')) : []
         }
     }
-    clickHomePage=e =>{
-        e.preventDefault()
-        // let history = localStorage.getItem('history') ? JSON.parse(localStorage.getItem('history')) : []
-        const Game = JSON.parse(localStorage.getItem('GAME'))
-       this.state.history.push(Game)
-        localStorage.setItem('history',JSON.stringify(this.state.history))
-    }
+    // clickHomePage=e =>{
+    //     e.preventDefault()
+    //     // let history = localStorage.getItem('history') ? JSON.parse(localStorage.getItem('history')) : []
+    //     const Game = JSON.parse(localStorage.getItem('GAME'))
+    //    this.state.history.push(Game)
+    //     localStorage.setItem('history',JSON.stringify(this.state.history))
+    // }
     histroyClick = e =>{
         e.preventDefault()
         this.setState({

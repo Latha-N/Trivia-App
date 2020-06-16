@@ -4,9 +4,8 @@ class Name extends React.Component{
     constructor(){
         super()
         this.state={
-            name:''
-
-        }
+            name:'',
+            }
     }
     handleChange=(e)=>{
         this.setState({
@@ -28,6 +27,7 @@ class Name extends React.Component{
 
         
     }
+    
     render(){
         return(
             <div>
@@ -35,7 +35,7 @@ class Name extends React.Component{
             <br></br>
                 <input type="text" value={this.state.name} name="name" id="name" onChange={this.handleChange}/>
                 <button onClick={this.handleSubmit} type="submit" className="btn btn-primary">NEXT</button>
-            </div>
+        </div>
         )
     }
 }
